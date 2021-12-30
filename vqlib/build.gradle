@@ -14,7 +14,7 @@ android {
 
     buildTypes {
         release{
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
 
         }
@@ -23,17 +23,17 @@ android {
     buildFeatures {
         viewBinding true
     }
+}
 
-    afterEvaluate {
-        publishing {
-            publications {
-                release(MavenPublication) {
-                    from components.release
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
 
-                    groupId = 'com.github.visiaquantum'
-                    artifactId = 'android-library'
-                    version = '1.0.7'
-                }
+                groupId = 'com.github.visiaquantum'
+                artifactId = 'android-library'
+                version = '1.0.8'
             }
         }
     }
