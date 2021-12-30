@@ -32,7 +32,7 @@ android {
 
                     groupId = 'com.github.visiaquantum'
                     artifactId = 'android-library'
-                    version = '1.0.3'
+                    version = '1.0.4'
                 }
             }
         }
