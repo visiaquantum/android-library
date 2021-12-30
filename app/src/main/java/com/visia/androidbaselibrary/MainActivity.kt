@@ -1,4 +1,4 @@
-package com.vqlib.app
+package com.visia.androidbaselibrary
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

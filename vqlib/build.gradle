@@ -23,20 +23,6 @@ android {
     buildFeatures {
         viewBinding true
     }
-
-    afterEvaluate {
-        publishing {
-            publications {
-                release(MavenPublication) {
-                    from components.release
-
-                    groupId = 'com.github.visiaquantum'
-                    artifactId = 'android-library'
-                    version = '1.0.4'
-                }
-            }
-        }
-    }
 }
 
 dependencies {
