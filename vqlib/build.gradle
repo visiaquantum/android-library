@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'//    kotlin("android.extensions")
 apply plugin: 'kotlin-kapt'
+apply plugin: 'maven-publish'
 
 android {
 
@@ -21,6 +22,20 @@ android {
 
     buildFeatures {
         viewBinding true
+    }
+
+    afterEvaluate {
+        publishing {
+            publications {
+                release(MavenPublication) {
+                    from components.release
+
+                    groupId = 'com.github.visiaquantum'
+                    artifactId = 'android-library'
+                    version = '1.0.3'
+                }
+            }
+        }
     }
 }
 
